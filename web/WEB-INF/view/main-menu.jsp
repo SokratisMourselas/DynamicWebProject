@@ -9,9 +9,10 @@
 
 <html>
   <head>
-    <title>Index</title>
+    <title>Main Menu</title>
   </head>
   <body>
-  Initialization of Spring MVC Project
+  <h2>Initialization of Spring MVC Project</h2>
+  <h3 style="margin-left: 50px">------ Inside main-menu.jsp ------</h3>
   </body>
 </html>
