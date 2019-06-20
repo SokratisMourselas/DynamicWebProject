@@ -17,7 +17,7 @@
   <body>
   Initialization of Spring MVC Project<br>
   <hr>
-  <a href="/main-menu">Go to Main Menu</a>
+  <a href="main-menu">Go to Main Menu</a>
   <%--<img src="${pageContext.request.contextPath}/resources/images/spring-logo.png" />--%>
   </body>
 </html>
