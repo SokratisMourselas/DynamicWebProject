@@ -18,6 +18,8 @@
   Initialization of Spring MVC Project<br>
   <hr>
   <a href="main-menu">Go to Main Menu</a>
+  <br>
+  <a href="login-form">Log In</a>
   <%--<img src="${pageContext.request.contextPath}/resources/images/spring-logo.png" />--%>
   </body>
 </html>
