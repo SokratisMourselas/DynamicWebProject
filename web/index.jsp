@@ -12,6 +12,7 @@
     <title>Index</title>
   </head>
   <body>
-  Initialization of Spring MVC Project
+  Initialization of Spring MVC Project <br>
+  <a href="/main-menu">Go to Main Menu</a>
   </body>
 </html>
