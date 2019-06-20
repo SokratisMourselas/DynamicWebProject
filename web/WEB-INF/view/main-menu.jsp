@@ -16,6 +16,6 @@
   <h3 style="margin-left: 50px">------ Inside main-menu.jsp ------</h3>
   <hr>
 
-  <h3><a href="/showForm">Go to form</a> </h3>
+  <h3><a href="/mainPath/showForm">Go to form</a> </h3>
   </body>
 </html>

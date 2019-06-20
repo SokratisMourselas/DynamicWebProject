@@ -4,9 +4,10 @@ package com.spring.springdemo.mvc.Controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import javax.servlet.http.HttpServletRequest;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
+@RequestMapping("/mainPath")
 public class HelloWorldController {
 
     @RequestMapping("/showForm")
@@ -20,9 +21,9 @@ public class HelloWorldController {
     }
 
     @RequestMapping("/processFormVersionTwo")
-    public String processFormToUpperCase(HttpServletRequest request, Model model){
+    public String processFormToUpperCase(@RequestParam("studentNameTwo") String studentName, Model model){
 
-        String name = request.getParameter("studentNameTwo");
+        String name = studentName;
 
         name = name.toUpperCase();
 

@@ -9,6 +9,6 @@
 
 Student name: ${param.studentName}
 <br><br>
-Shout: ${message}
+Shout: <b>${message}</b>
 </body>
 </html>
