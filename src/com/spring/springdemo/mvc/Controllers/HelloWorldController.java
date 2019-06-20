@@ -22,7 +22,7 @@ public class HelloWorldController {
     @RequestMapping("/processFormVersionTwo")
     public String processFormToUpperCase(HttpServletRequest request, Model model){
 
-        String name = request.getParameter("studentName");
+        String name = request.getParameter("studentNameTwo");
 
         name = name.toUpperCase();
 

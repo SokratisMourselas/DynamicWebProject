@@ -4,7 +4,7 @@
 </head>
 <body>
     Hello World!
-
+    <hr>
 <br><br>
 
 Student name: ${param.studentName}

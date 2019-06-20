@@ -10,9 +10,14 @@
 <html>
   <head>
     <title>Index</title>
+    <%--<link rel="stylesheet" type="text/css"--%>
+          <%--href="${pageContext.request.contextPath}/resources/css/my-test.css">--%>
+    <%--<script src="${pageContext.request.contextPath}/resources/js/simple-test.js"></script>--%>
   </head>
   <body>
   Initialization of Spring MVC Project<br>
+  <hr>
   <a href="/main-menu">Go to Main Menu</a>
+  <%--<img src="${pageContext.request.contextPath}/resources/images/spring-logo.png" />--%>
   </body>
 </html>
