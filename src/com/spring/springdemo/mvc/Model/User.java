@@ -1,16 +1,36 @@
 package com.spring.springdemo.mvc.Model;
 
-import java.util.LinkedHashMap;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 public class User {
 
-
+    @NotNull(message = "*is required")
+    @Size(min = 1, message = "*is required")
     private String name;
+
     private String password;
     private String country;
+    private String favProLang;
 
-    public User() {
+    private String[] favOperatingSystems;
 
+    public User(){}
+
+    public String[] getFavOperatingSystems() {
+        return favOperatingSystems;
+    }
+
+    public void setFavOperatingSystems(String[] favOperatingSystems) {
+        this.favOperatingSystems = favOperatingSystems;
+    }
+
+    public String getFavProLang() {
+        return favProLang;
+    }
+
+    public void setFavProLang(String favProLang) {
+        this.favProLang = favProLang;
     }
 
     public String getCountry() {

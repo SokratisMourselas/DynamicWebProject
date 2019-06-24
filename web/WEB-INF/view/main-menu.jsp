@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%--
   Created by IntelliJ IDEA.
   User: smoursel
@@ -17,11 +18,20 @@
   <hr>
 
   <h3><a href="/mainPath/showForm">Go to form</a> </h3>
+  <hr>
 
-  <h4>A User will be returned here: </h4>
+  <h4><u>A User will be returned here: </u></h4>
   <h3>Username: ${user.name}</h3>
   <h3>Country: ${user.country}</h3>
-  <h4>${user.password.length()>0 ? "YES": "NO"}</h4>
+  <h3>Favourite Programming Language: ${user.favProLang}</h3>
+  <h4>Password: ${user.password.length()>0 ? "YES": "NO"}</h4>
+
+  <h3>Operating Systems:<br></h3>
+  <ul>
+    <c:forEach var="temp" items="${user.favOperatingSystems}" >
+      <li>${temp}</li>
+    </c:forEach>
+  </ul>
 
 
   </body>

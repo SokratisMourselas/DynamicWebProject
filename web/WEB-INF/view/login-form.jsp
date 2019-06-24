@@ -11,18 +11,27 @@
 <form:form action="loginForm" modelAttribute="user">
 
 
-    First Name: <form:input path="name"/>
+    Name (*): <form:input path="name"/>
+                <form:errors path="name" cssClass="error"/>
     <br><br>
 
-    Password: <form:input path="password" />
+    Password: <form:password path="password" />
     <br><br>
 
     Country Preference: <form:select path="country">
                             <form:options items="${theCountryOptions}"/>
-
                         </form:select>
     <br><br>
-
+    Preferred framework:<br>
+        <form:radiobutton path="favProLang" value="Spring"/>Spring
+        <form:radiobutton path="favProLang" value="Spring-Boot"/>Spring-Boot
+        <form:radiobutton path="favProLang" value="Java EE"/>Java EE
+    <br><br>
+    Operating Systems:<br>
+        <form:checkbox path="favOperatingSystems" value="Windows"/>Windows
+        <form:checkbox path="favOperatingSystems" value="OS X"/>OS X
+        <form:checkbox path="favOperatingSystems" value="Linux"/>Linux
+    <br><br>
     <input type="submit" value="Submit">
 </form:form>
 

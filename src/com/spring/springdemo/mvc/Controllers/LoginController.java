@@ -4,9 +4,11 @@ import com.spring.springdemo.mvc.Model.User;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.validation.Valid;
 import java.util.Map;
 
 @Controller
@@ -28,16 +30,20 @@ public class LoginController {
 
 
     @RequestMapping("/loginForm")
-    public String loginUser(@ModelAttribute("user") User theUser){
+    public String loginUser(@Valid @ModelAttribute("user") User theUser, BindingResult theBindingResult){
 
         //logging the input data
-        System.out.println("the User is set to : "+ theUser.getName() + " from " + theUser.getCountry());
+//        System.out.println("the User is set to : "+ theUser.getName() + " from " + theUser.getCountry());
 
         // Has the user set  a password question
-        String passwordSet = theUser.getPassword().isEmpty() ? "NO" : "YES";
-        System.out.println("Has the User set a password? --> " + passwordSet);
+//        String passwordSet = theUser.getPassword().isEmpty() ? "NO" : "YES";
+//        System.out.println("Has the User set a password? --> " + passwordSet);
 
-        return "main-menu";
+        if (theBindingResult.hasErrors()){
+            return "login-form";
+        } else {
+            return "main-menu";
+        }
     }
 
 
