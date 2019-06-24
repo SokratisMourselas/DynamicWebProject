@@ -19,7 +19,10 @@
   <h3><a href="/mainPath/showForm">Go to form</a> </h3>
 
   <h4>A User will be returned here: </h4>
-  <h5>Username: ${user.name}</h5>
+  <h3>Username: ${user.name}</h3>
+  <h3>Country: ${user.country}</h3>
+  <h4>${user.password.length()>0 ? "YES": "NO"}</h4>
+
 
   </body>
 </html>

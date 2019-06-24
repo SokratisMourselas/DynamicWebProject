@@ -17,6 +17,12 @@
     Password: <form:input path="password" />
     <br><br>
 
+    Country Preference: <form:select path="country">
+                            <form:options items="${theCountryOptions}"/>
+
+                        </form:select>
+    <br><br>
+
     <input type="submit" value="Submit">
 </form:form>
 

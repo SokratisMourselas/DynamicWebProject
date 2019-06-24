@@ -9,7 +9,7 @@
 
 <html>
   <head>
-    <title>Index</title>
+    <title>Home</title>
     <%--<link rel="stylesheet" type="text/css"--%>
           <%--href="${pageContext.request.contextPath}/resources/css/my-test.css">--%>
     <%--<script src="${pageContext.request.contextPath}/resources/js/simple-test.js"></script>--%>
