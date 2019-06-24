@@ -24,7 +24,7 @@ public class LoginController {
 
         theModel.addAttribute("user", theUser);
         // add the country options to the model
-        theModel.addAttribute("theCountryOptions", countryOptions);
+//        theModel.addAttribute("theCountryOptions", countryOptions);
         return "login-form";
     }
 

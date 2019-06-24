@@ -3,10 +3,14 @@
 <html>
 <head>
     <title>Log In</title>
+    <style>
+        .error{color: red}
+    </style>
 </head>
 <body>
 
 <h1><b>Login here</b></h1>
+<i>Asterisk (*) means required field.</i>
 <hr>
 <form:form action="loginForm" modelAttribute="user">
 
@@ -19,7 +23,7 @@
     <br><br>
 
     Country Preference: <form:select path="country">
-                            <form:options items="${theCountryOptions}"/>
+                            <form:option value="GR">Greece</form:option>
                         </form:select>
     <br><br>
     Preferred framework:<br>
