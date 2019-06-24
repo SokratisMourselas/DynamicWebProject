@@ -17,5 +17,9 @@
   <hr>
 
   <h3><a href="/mainPath/showForm">Go to form</a> </h3>
+
+  <h4>A User will be returned here: </h4>
+  <h5>Username: ${user.name}</h5>
+
   </body>
 </html>

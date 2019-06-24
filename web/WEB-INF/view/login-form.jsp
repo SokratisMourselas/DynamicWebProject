@@ -8,11 +8,17 @@
 
 <h1><b>Login here</b></h1>
 <hr>
-<form action="login"  method="POST">
-    <input type="text" name="username" placeholder="Username"><br>
-    <input type="password" name="password" placeholder="Password"><br>
-    <input type="submit">
-</form>
+<form:form action="loginForm" modelAttribute="user">
+
+
+    First Name: <form:input path="name"/>
+    <br><br>
+
+    Password: <form:input path="password" />
+    <br><br>
+
+    <input type="submit" value="Submit">
+</form:form>
 
 </body>
 </html>
