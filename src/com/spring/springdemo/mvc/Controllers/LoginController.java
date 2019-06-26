@@ -2,9 +2,12 @@ package com.spring.springdemo.mvc.Controllers;
 
 import com.spring.springdemo.mvc.Model.User;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -13,6 +16,14 @@ import java.util.Map;
 
 @Controller
 public class LoginController {
+
+    // trimming Strings
+    // Removing whitespaces
+    @InitBinder
+    public void initBinder(WebDataBinder dataBinder){
+        StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
+        dataBinder.registerCustomEditor(String.class, stringTrimmerEditor);
+    }
 
     @Value("#{countryOptions}")
     private Map<String, String> countryOptions;
@@ -31,20 +42,12 @@ public class LoginController {
 
     @RequestMapping("/loginForm")
     public String loginUser(@Valid @ModelAttribute("user") User theUser, BindingResult theBindingResult){
-
-        //logging the input data
-//        System.out.println("the User is set to : "+ theUser.getName() + " from " + theUser.getCountry());
-
-        // Has the user set  a password question
-//        String passwordSet = theUser.getPassword().isEmpty() ? "NO" : "YES";
-//        System.out.println("Has the User set a password? --> " + passwordSet);
-
+        System.out.println("Last name: | " + theUser.getName()+ " |");
         if (theBindingResult.hasErrors()){
             return "login-form";
         } else {
             return "main-menu";
         }
     }
-
 
 }

@@ -24,8 +24,22 @@
 
     Country Preference: <form:select path="country">
                             <form:option value="GR">Greece</form:option>
+                            <form:option value="GE">Germany</form:option>
+                            <form:option value="US">United States of America</form:option>
+                            <form:option value="FR">France</form:option>
                         </form:select>
     <br><br>
+
+    Postal/ZIP Code: <form:input path="postalCode"/>
+                        <form:errors path="postalCode" cssClass="error"/>
+
+    <br><br>
+
+    Course Code: <form:input path="courseCode"/>
+    <form:errors path="courseCode" cssClass="error"/>
+
+    <br><br>
+
     Preferred framework:<br>
         <form:radiobutton path="favProLang" value="Spring"/>Spring
         <form:radiobutton path="favProLang" value="Spring-Boot"/>Spring-Boot

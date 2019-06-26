@@ -21,15 +21,17 @@
   <hr>
 
   <h4><u>A User will be returned here: </u></h4>
-  <h3>Username: ${user.name}</h3>
-  <h3>Country: ${user.country}</h3>
-  <h3>Favourite Programming Language: ${user.favProLang}</h3>
-  <h4>Password: ${user.password.length()>0 ? "YES": "NO"}</h4>
+  <h3>Username: <b>${user.name}</b></h3>
+  <h3>Country: <b>${user.country}</b></h3>
+  <h3>Postal/ZIP Code: <b>${user.postalCode}</b></h3>
+  <h3>Course Code: <b>${user.courseCode}</b></h3>
+  <h3>Favourite Programming Language: <b>${user.favProLang}</b></h3>
+  <h4>Password: <b>${user.password.length()>0 ? "YES": "NO"}</b></h4>
 
   <h3>Operating Systems:<br></h3>
   <ul>
     <c:forEach var="temp" items="${user.favOperatingSystems}" >
-      <li>${temp}</li>
+      <li><b>${temp}</b></li>
     </c:forEach>
   </ul>
 
