@@ -12,9 +12,9 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface CourseCode {
 
-    String value() default "LUV";
+    String[] value() default {"LUV", "TOPS"};
 
-    String message() default "*must start with LUV";
+    String message() default "*must start with LUV or TOPS";
 
     Class<?>[] groups() default {};
 
